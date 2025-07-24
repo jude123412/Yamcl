@@ -7,6 +7,7 @@ import net.minecraft.block.material.Material;
 public class BlockBase extends Block {
 
     private boolean _mIsOpaqueCube;
+    private int _mRenderBlockPass;
 
     public BlockBase(Material pMaterial) {
         super(pMaterial);
@@ -17,8 +18,17 @@ public class BlockBase extends Block {
         _mIsOpaqueCube = pFlag;
     }
 
+    public void setInner_RenderBlockPass(int pPass) {
+        _mRenderBlockPass = pPass;
+    }
+
     @Override
     public boolean isOpaqueCube() {
         return _mIsOpaqueCube;
+    }
+
+    @Override
+    public int getRenderBlockPass() {
+        return _mRenderBlockPass;
     }
 }

@@ -19,7 +19,7 @@ public class ModSimpleBaseBlock {
 
     /**
      * Create a new simple block (for recipes or other very basic stuff)
-     * 
+     *
      * @param pItemName          The Blocks unlocalized name
      * @param pCustomTextureName A custom texture for this block
      * @param pCreativeTabName   The name for the creative tab that will be assigned later in the registration process
@@ -37,7 +37,7 @@ public class ModSimpleBaseBlock {
     /**
      * Create a new (still simple) Block by using a helper class to provide additional Information about the block's
      * properties
-     * 
+     *
      * @param pBlockProperties
      */
     public ModSimpleBaseBlock(IExtendedBlockProperties pBlockProperties, String pCreativeTabName) {
@@ -59,11 +59,12 @@ public class ModSimpleBaseBlock {
         _mBlockInstance.setLightOpacity(pBlockProperties.getOpacity());
 
         _mBlockInstance.setInner_IsOpaque(pBlockProperties.getIsOpaqueCube());
+        _mBlockInstance.setInner_RenderBlockPass(pBlockProperties.getRenderBlockPass());
     }
 
     /**
      * Create a new simple block (for recipes or other very basic stuff)
-     * 
+     *
      * @param pItemName        The Blocks unlocalized name
      * @param pCreativeTabName The name for the creative tab that will be assigned later in the registration process
      */
